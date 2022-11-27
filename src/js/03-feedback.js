@@ -10,7 +10,6 @@ feedbackFormEl.elements.message.value = inputValues.message || '';
 feedbackFormEl.addEventListener('input', throttle(onInputFoo, 500));
 feedbackFormEl.addEventListener('submit', onFormSubmit);
 
-
 function onInputFoo(event) {
   if (event.target.nodeName === 'INPUT') {
     inputValues.email = event.target.value;
@@ -25,9 +24,6 @@ function onFormSubmit(event) {
   console.log(inputValues);
   inputValues = {};
   localStorage.removeItem(FIELDVALUES_KEY);
-  localStorage.clear()
+  localStorage.clear();
   feedbackFormEl.reset();
 }
-
-
-
